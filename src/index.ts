@@ -73,10 +73,10 @@ interface IRepo {
   if (!sum) return;
 
   const oneDay = [
-    { label: '🌞 Morning', commits: morning },
-    { label: '🌆 Daytime', commits: daytime },
-    { label: '🌃 Evening', commits: evening },
-    { label: '🌙 Night', commits: night },
+    { label: '🌞 아침', commits: morning },
+    { label: '🌆 낮', commits: daytime },
+    { label: '🌃 저녁', commits: evening },
+    { label: '🌙 밤', commits: night },
   ];
 
   const lines = oneDay.reduce((prev, cur) => {
@@ -106,7 +106,7 @@ interface IRepo {
     files: {
       [filename]: {
         // eslint-disable-next-line quotes
-        filename: (morning + daytime) > (evening + night) ? "I'm an early 🐤" : "I'm a night 🦉",
+        filename: (morning + daytime) > (evening + night) ? "얼리버드 🐤" : "올빼미 🦉",
         content: lines.join('\n'),
       },
     },
