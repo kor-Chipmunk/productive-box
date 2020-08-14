@@ -82,7 +82,7 @@ interface IRepo {
   const lines = oneDay.reduce((prev, cur) => {
     const percent = cur.commits / sum * 100;
     const line = [
-      `${cur.label}`.padEnd(10),
+      `${cur.label}`.padEnd(4),
       `${cur.commits.toString().padStart(5)} commits`.padEnd(14),
       generateBarChart(percent, 21),
       String(percent.toFixed(1)).padStart(5) + '%',
@@ -106,7 +106,7 @@ interface IRepo {
     files: {
       [filename]: {
         // eslint-disable-next-line quotes
-        filename: (morning + daytime) > (evening + night) ? "얼리버드 🐤" : "올빼미 🦉",
+        filename: (morning + daytime) > (evening + night) ? "저는 아침형입니다. 🐤" : "저는 새벽형입니다. 🦉",
         content: lines.join('\n'),
       },
     },
